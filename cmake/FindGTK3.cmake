@@ -50,7 +50,8 @@ if(GTK3_LIBRARY)
   set_property(TARGET ${GTK3} PROPERTY INTERFACE_COMPILE_OPTIONS "${GTK3_PKG_CFLAGS_OTHER}")
 
   set(GTK3_INCLUDE_DIRS)
-
+ include_directories(/usr/include/harfbuzz)
+ 
   find_path(GTK3_INCLUDE_DIR "gtk/gtk.h"
     HINTS ${GTK3_PKG_INCLUDE_DIRS})
 
